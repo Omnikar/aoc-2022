@@ -20,9 +20,9 @@ themselves), including `cargo clippy` violations, which will not be fixed outsid
 revised versions; as a result, there may be `#[allow(…)]` attributes applied to some of
 the original solutions to disable the violated lints.
 
-* [ ] Day 1
-  * [ ] Part 1
-  * [ ] Part 2
+* [x] [Day 1](src/days/day1.rs)
+  * [x] Part 1
+  * [x] Part 2
 * [ ] Day 2
   * [ ] Part 1
   * [ ] Part 2
