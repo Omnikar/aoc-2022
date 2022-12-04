@@ -23,7 +23,7 @@ the original solutions to disable the violated lints.
 * [x] [Day 1](src/days/day1.rs)
   * [x] Part 1
   * [x] Part 2
-* [x] [Day 2](src/days/day2.rs)
+* [x] [Day 2](src/days/day2.rs)[*](src/days/day2_revised.rs)
   * [x] Part 1
   * [x] Part 2
 * [ ] Day 3
