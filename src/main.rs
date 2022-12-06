@@ -23,7 +23,7 @@ fn main() {
 
     let start = std::time::Instant::now();
     let answer = func(&input);
-    println!("{:?}", answer);
+    println!("{}", answer);
     let end = std::time::Instant::now();
     let elapsed = end - start;
     if time {

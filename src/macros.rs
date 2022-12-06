@@ -1,11 +1,9 @@
-use std::fmt::Debug;
-
-pub type Part = fn(&str) -> Box<dyn Debug>;
+pub type Part = fn(&str) -> Box<dyn std::fmt::Display>;
 
 #[macro_export]
 macro_rules! box_fun {
     ($fun:expr) => {{
-        fn __box_fun(input: &str) -> ::std::boxed::Box<dyn ::std::fmt::Debug> {
+        fn __box_fun(input: &str) -> ::std::boxed::Box<dyn ::std::fmt::Display> {
             ::std::boxed::Box::new($fun(input))
         }
         __box_fun
