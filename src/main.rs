@@ -22,10 +22,11 @@ fn main() {
     stdin().read_to_string(&mut input).unwrap();
 
     let start = std::time::Instant::now();
-    func(&input);
+    let answer = func(&input);
+    println!("{:?}", answer);
     let end = std::time::Instant::now();
     let elapsed = end - start;
     if time {
-        println!("took {}μs", elapsed.as_micros());
+        eprintln!("took {}μs", elapsed.as_micros());
     }
 }

@@ -6,18 +6,14 @@ fn parse(input: &str) -> impl Iterator<Item = impl Iterator<Item = u32> + '_> + 
     })
 }
 
-fn part1(input: &str) {
-    let answer = parse(input).map(Iterator::sum).max().unwrap_or(0);
-
-    println!("{answer}");
+fn part1(input: &str) -> u32 {
+    parse(input).map(Iterator::sum).max().unwrap_or(0)
 }
 
-fn part2(input: &str) {
+fn part2(input: &str) -> u32 {
     let mut invs: Vec<u32> = parse(input).map(Iterator::sum).collect();
     invs.sort();
-    let answer: u32 = invs.drain((invs.len() - 3)..).sum();
-
-    println!("{answer}");
+    invs.drain((invs.len() - 3)..).sum()
 }
 
 crate::parts!(part1 part2);

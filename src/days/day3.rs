@@ -5,8 +5,8 @@ fn priority(c: char) -> u32 {
         + 1
 }
 
-fn part1(input: &str) {
-    let answer: u32 = input
+fn part1(input: &str) -> u32 {
+    input
         .lines()
         .map(|l| l.split_at(l.len() / 2))
         .map(|(l, r)| {
@@ -16,13 +16,11 @@ fn part1(input: &str) {
                 .unwrap()
         })
         .map(priority)
-        .sum();
-
-    println!("{answer}");
+        .sum()
 }
 
-fn part2(input: &str) {
-    let answer: u32 = input
+fn part2(input: &str) -> u32 {
+    input
         .lines()
         .collect::<Vec<_>>()
         .chunks(3)
@@ -36,9 +34,7 @@ fn part2(input: &str) {
                 .unwrap()[0]
         })
         .map(priority)
-        .sum();
-
-    println!("{answer}");
+        .sum()
 }
 
 crate::parts!(part1 part2);

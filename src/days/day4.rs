@@ -8,24 +8,20 @@ fn parse(input: &str) -> impl Iterator<Item = [std::ops::RangeInclusive<u32>; 2]
     })
 }
 
-fn part1(input: &str) {
-    let answer = parse(input)
+fn part1(input: &str) -> usize {
+    parse(input)
         .filter(|p| {
             (0..=1).any(|i| p[i].start() <= p[1 - i].start() && p[i].end() >= p[1 - i].end())
         })
-        .count();
-
-    println!("{answer}");
+        .count()
 }
 
-fn part2(input: &str) {
-    let answer = parse(input)
+fn part2(input: &str) -> usize {
+    parse(input)
         .filter(|p| {
             (0..=1).any(|i| p[i].end() >= p[1 - i].start() && p[i].start() <= p[1 - i].end())
         })
-        .count();
-
-    println!("{answer}");
+        .count()
 }
 
 crate::parts!(part1 part2);

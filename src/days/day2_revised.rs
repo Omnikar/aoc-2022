@@ -14,18 +14,14 @@ fn parse(input: &str) -> impl Iterator<Item = (u32, u32)> + '_ {
         .map(|ln| ln.split_once(' ').map(lr).unwrap())
 }
 
-fn part1(input: &str) {
-    let answer: u32 = parse(input).map(|(l, r)| r + 3 * ((l + r) % 3)).sum();
-
-    println!("{answer}");
+fn part1(input: &str) -> u32 {
+    parse(input).map(|(l, r)| r + 3 * ((l + r) % 3)).sum()
 }
 
-fn part2(input: &str) {
-    let answer: u32 = parse(input)
+fn part2(input: &str) -> u32 {
+    parse(input)
         .map(|(l, r)| (4 - l + r) % 3 + 1 + 3 * (r - 1))
-        .sum();
-
-    println!("{answer}");
+        .sum()
 }
 
 crate::parts!(part1 part2);
