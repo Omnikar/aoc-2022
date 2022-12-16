@@ -8,6 +8,8 @@ mod day7;
 mod day8;
 mod day9;
 
+mod day10;
+
 mod day2_revised;
 
 crate::days!(
@@ -20,6 +22,8 @@ crate::days!(
     day7
     day8
     day9
+
+    day10
 
     day2_revised
 );
